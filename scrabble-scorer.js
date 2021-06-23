@@ -34,17 +34,18 @@ function oldScrabbleScorer(word) {
 // don't change the names or your program won't work as expected. //
 
 function initialPrompt() {
-
    console.log("Let's play some Scrabble! \n \nEnter a word to score: ");
    return word = input.question();
-
 }
 
-simpleScore = (word) => console.log(`Score for '${word}': ${word.length}`);
-
-const vowels = ['a', 'e', 'i', 'o', 'u'];
+function simpleScore (word){
+  console.log(word.length); 
+  return word.length;
+} 
 
 let vowelBonusScore = (word) => {
+
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
 
   word = word.toLowerCase();
   let score = 0;
