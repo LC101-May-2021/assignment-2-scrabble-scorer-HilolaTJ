@@ -43,14 +43,13 @@ function simpleScore (word){
   return word.length;
 } 
 
-let vowelBonusScore = (word) => {
+function vowelBonusScore (word) {
 
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-
-  word = word.toLowerCase();
+  let toLowerWord = word.toLowerCase();
   let score = 0;
-  for (let i = 0; i < word.length; i++){
-    if (vowels.includes(word[i])) {
+  for (let i = 0; i < toLowerWord.length; i++){
+    if (vowels.includes(toLowerWord[i])===true) {
       score += 3;
     }else{
       score += 1;
