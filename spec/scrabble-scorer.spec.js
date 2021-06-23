@@ -1,4 +1,19 @@
-const solution = require('../scrabble-scorer');
+
+	it("simpleScore returns a score equal to the length of its input", function() {
+		expect(solution.simpleScore('foo')).toBe(3);
+		expect(solution.simpleScore('')).toBe(0);
+	});
+
+	// vowelBonusScore tests //
+	it("contains a vowelBonusScore function", function() {
+		expect(typeof solution.vowelBonusScore).toBe('function');
+	});
+
+	it("vowelBonusScore returns an integer score", function() {
+		expect(typeof solution.vowelBonusScore('foo')).toBe('number');
+	});
+
+	it("vowelBonusScore returns three points per vowel", function() {const solution = require('../scrabble-scorer');
 
 describe("Scrabble Scorer solution", function() {
 
@@ -78,21 +93,6 @@ describe("Scrabble Scorer solution", function() {
 		expect(typeof solution.simpleScore('foo')).toBe('number');
 	});
 
-	it("simpleScore returns a score equal to the length of its input", function() {
-		expect(solution.simpleScore('foo')).toBe(3);
-		expect(solution.simpleScore('')).toBe(0);
-	});
-
-	// vowelBonusScore tests //
-	it("contains a vowelBonusScore function", function() {
-		expect(typeof solution.vowelBonusScore).toBe('function');
-	});
-
-	it("vowelBonusScore returns an integer score", function() {
-		expect(typeof solution.vowelBonusScore('foo')).toBe('number');
-	});
-
-	it("vowelBonusScore returns three points per vowel", function() {
 		expect(solution.vowelBonusScore('a')).toBe(3);
 		expect(solution.vowelBonusScore('e')).toBe(3);
 		expect(solution.vowelBonusScore('i')).toBe(3);
